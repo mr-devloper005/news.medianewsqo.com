@@ -1,9 +1,9 @@
 export const siteTaskDefinitions = [
   {
     key: 'mediaDistribution',
-    label: 'Release media',
+    label: 'Press Releases',
     route: '/news',
-    description: 'Official announcements, launches, and media statements.',
+    description: 'Official press releases, corporate announcements, and media statements.',
     contentType: 'mediaDistribution',
     enabled: true,
   },

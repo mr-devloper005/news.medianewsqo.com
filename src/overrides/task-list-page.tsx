@@ -17,18 +17,18 @@ export async function TaskListPageOverride({ task, category }: { task: TaskKey; 
   const normalizedCategory = category ? normalizeCategory(category) : 'all'
 
   return (
-    <div className="min-h-screen bg-[#faf7f8] text-[#2a1522]">
+    <div className="min-h-screen bg-[#fff8f8] text-[#1a0505]">
       <NavbarShell />
-      <div className="border-b border-[#e8c8d2] bg-[linear-gradient(180deg,#fff5f7_0%,#faf7f8_100%)]">
-        <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#b95e82]">Archive</p>
-          <h1 className="mt-2 max-w-3xl font-[family-name:var(--site-font-display)] text-3xl font-semibold tracking-[-0.03em] sm:text-4xl">
+      <div className="border-b-2 border-[#662222] bg-gradient-to-br from-[#1a0505] to-[#3d0f0f] text-white">
+        <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+          <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#e87070]">Press Archive</p>
+          <h1 className="mt-2 max-w-3xl font-[family-name:var(--site-font-display)] text-3xl font-bold tracking-[-0.03em] text-white sm:text-4xl">
             {intro?.title || taskConfig?.label}
           </h1>
-          <p className="mt-3 max-w-2xl text-sm leading-7 text-[#5c4552]">{taskConfig?.description}</p>
+          <p className="mt-3 max-w-2xl text-sm leading-7 text-white/70">{taskConfig?.description}</p>
           {intro
             ? intro.paragraphs.map((p) => (
-                <p key={p.slice(0, 32)} className="mt-4 max-w-2xl text-sm leading-7 text-[#5c4552]">
+                <p key={p.slice(0, 32)} className="mt-4 max-w-2xl text-sm leading-7 text-white/60">
                   {p}
                 </p>
               ))
@@ -40,18 +40,18 @@ export async function TaskListPageOverride({ task, category }: { task: TaskKey; 
         <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <form
             className="flex w-full max-w-2xl flex-col gap-3 sm:flex-row sm:items-end"
-            action={taskConfig?.route || '/updates'}
+            action={taskConfig?.route || '/news'}
             method="get"
           >
             <div className="flex-1">
-              <label className="flex items-center gap-1 text-xs font-bold uppercase tracking-[0.2em] text-[#5c4552]">
+              <label className="flex items-center gap-1 text-xs font-bold uppercase tracking-[0.2em] text-[#662222]">
                 <Filter className="h-3.5 w-3.5" />
                 Category
               </label>
               <select
                 name="category"
                 defaultValue={normalizedCategory}
-                className="mt-2 w-full rounded-xl border border-[#e8c8d2] bg-white px-3 py-2.5 text-sm font-medium"
+                className="mt-2 w-full rounded-sm border border-[#e8c8c8] bg-white px-3 py-2.5 text-sm font-medium focus:border-[#662222] focus:outline-none"
               >
                 <option value="all">All categories</option>
                 {CATEGORY_OPTIONS.map((item) => (
@@ -63,22 +63,22 @@ export async function TaskListPageOverride({ task, category }: { task: TaskKey; 
             </div>
             <button
               type="submit"
-              className="h-11 rounded-xl bg-[#2a1522] px-5 text-sm font-semibold text-white transition hover:bg-[#b95e82]"
+              className="h-11 rounded-sm bg-[#662222] px-5 text-sm font-semibold text-white transition hover:bg-[#842A3B]"
             >
               Apply
             </button>
           </form>
           <form className="flex w-full max-w-sm gap-2" action="/search" method="get">
             <div className="relative flex-1">
-              <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[#5c4552]/70" />
+              <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[#662222]/60" />
               <input
                 name="q"
-                className="h-11 w-full rounded-xl border border-[#e8c8d2] bg-white pl-9 pr-3 text-sm"
-                placeholder="Search this topic across the site…"
+                className="h-11 w-full rounded-sm border border-[#e8c8c8] bg-white pl-9 pr-3 text-sm focus:border-[#662222] focus:outline-none"
+                placeholder="Search releases…"
               />
             </div>
             <input type="hidden" name="master" value="1" />
-            <button type="submit" className="h-11 rounded-xl bg-white px-4 text-sm font-semibold text-[#2a1522] ring-1 ring-[#e8c8d2] transition hover:ring-[#b95e82]">
+            <button type="submit" className="h-11 rounded-sm bg-[#662222] px-4 text-sm font-semibold text-white transition hover:bg-[#842A3B]">
               Go
             </button>
           </form>
@@ -86,7 +86,7 @@ export async function TaskListPageOverride({ task, category }: { task: TaskKey; 
         {intro && intro.links.length > 0 ? (
           <div className="mb-6 flex flex-wrap gap-2 text-sm">
             {intro.links.map((l) => (
-              <Link key={l.href} href={l.href} className="rounded-full border border-[#e8c8d2] bg-white px-3 py-1.5 text-[#b95e82] hover:border-[#b95e82]">
+              <Link key={l.href} href={l.href} className="rounded-sm border border-[#e8c8c8] bg-white px-3 py-1.5 text-[#662222] transition hover:border-[#662222] hover:bg-[#662222] hover:text-white">
                 {l.label}
               </Link>
             ))}
