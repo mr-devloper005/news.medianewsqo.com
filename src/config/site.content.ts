@@ -2,75 +2,76 @@ import type { TaskKey } from '@/lib/site-config'
 
 export const siteContent = {
   navbar: {
-    tagline: 'Release media distribution',
+    tagline: 'Professional Press Distribution',
   },
   footer: {
-    tagline: 'Visibility for every announcement',
+    tagline: 'Trusted Media Relations Platform',
   },
   hero: {
-    badge: 'Distribution platform',
-    title: ['Distribute release media with clarity, speed, and measurable reach.'],
+    badge: 'Media Distribution Platform',
+    title: ['Distribute Press Releases with Authority, Speed, and Global Reach.'],
     description:
-      'Send multimedia announcements to journalists, trade publications, and digital channels from one workflow built for comms and marketing teams.',
+      'Professional press release distribution platform connecting your news with journalists, media outlets, and digital channels worldwide. Built for communications teams who demand precision and measurable results.',
     primaryCta: {
-      label: 'View release media',
+      label: 'View Press Releases',
       href: '/news',
     },
     secondaryCta: {
-      label: 'Talk to us',
+      label: 'Contact Media Team',
       href: '/contact',
     },
-    searchPlaceholder: 'Search releases',
+    searchPlaceholder: 'Search press releases',
     focusLabel: 'Latest',
     featureCardBadge: 'Network reach',
     featureCardTitle: 'Track distribution and coverage in one place.',
     featureCardDescription:
-      'See where your story travels and keep stakeholders aligned with a single source of truth for every announcement.',
+      'Monitor where your story travels and keep stakeholders aligned with a single source of truth for every announcement.',
   },
   home: {
     metadata: {
-      title: 'Release media distribution and media reach',
+      title: 'Professional Press Release Distribution Platform',
       description:
-        'Publish corporate announcements, product launches, and media statements with a professional release media distribution experience.',
-      openGraphTitle: 'Newsprline — release media distribution',
-      openGraphDescription: 'Distribute release media, reach journalists, and keep visibility organized for your team.',
+        'Distribute corporate announcements, product launches, and media statements with a professional press release distribution platform trusted by communications teams worldwide.',
+      openGraphTitle: 'Professional Press Release Distribution | Media Relations Platform',
+      openGraphDescription: 'Distribute press releases, reach journalists, and track media coverage with our professional distribution platform.',
       keywords: [
-        'release media distribution',
+        'press release distribution',
         'media relations',
         'public relations',
         'news wire',
         'corporate communications',
-        'earnings',
-        'product launch',
-        'newsprline',
+        'media outreach',
+        'journalist targeting',
+        'press distribution',
+        'media coverage',
       ],
     },
-    servicesHeading: 'Release media distribution and multimedia software services',
-    aboutTitle: 'Built for communications teams, not generic feeds',
+    servicesHeading: 'Professional Press Release Distribution Services',
+    aboutTitle: 'Built for Communications Professionals',
     aboutBody:
-      'Newsprline is a media-forward publishing front that pairs archive browsing with a calm, high-trust interface. Post once, follow consistent formatting, and give readers a premium reading line that matches the importance of the news.',
-    resourcesHeading: 'Resources',
+      'Our platform is designed specifically for PR professionals, communications teams, and media relations experts who need reliable, measurable press release distribution. Every release follows AP style guidelines with consistent formatting across all channels.',
+    resourcesHeading: 'Success Stories',
     caseStudies: [
-      { title: 'Global retail rebrand', topic: 'Case study', image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80&auto=format&fit=crop' },
-      { title: 'Public sector transparency report', topic: 'Case study', image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80&auto=format&fit=crop' },
-      { title: 'B2B product launch', topic: 'Case study', image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&q=80&auto=format&fit=crop' },
+      { title: 'Global retail product launch', topic: 'Case study', image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80&auto=format&fit=crop' },
+      { title: 'Financial services quarterly earnings', topic: 'Case study', image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80&auto=format&fit=crop' },
+      { title: 'Technology company acquisition', topic: 'Case study', image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&q=80&auto=format&fit=crop' },
     ],
   },
   cta: {
-    badge: 'Ready when you are',
-    title: 'From draft review to live distribution, keep the story on-brand.',
-    description: 'Start with a release media item, attach supporting media, and keep every lane aligned on timing and message.',
+    badge: 'Ready to Distribute',
+    title: 'From draft to distribution, maintain brand consistency across all channels.',
+    description: 'Start with a professionally formatted release, attach multimedia assets, and distribute to targeted media lists with full tracking and analytics.',
     primaryCta: {
-      label: 'Contact sales',
+      label: 'Contact Sales',
       href: '/contact',
     },
     secondaryCta: {
-      label: 'Read latest',
+      label: 'View Latest Releases',
       href: '/news',
     },
   },
-  taskSectionHeading: 'Latest release media',
-  taskSectionDescriptionSuffix: 'Read recently distributed announcements.',
+  taskSectionHeading: 'Latest Press Releases',
+  taskSectionDescriptionSuffix: 'Browse recently distributed announcements.',
 } as const
 
 export const sitePricingContent = {
@@ -128,13 +129,13 @@ export const taskIntroCopy: Record<
   comment: { title: 'Comments', paragraphs: ['Commentary and response posts.'], links: [{ label: 'Home', href: '/' }] },
   org: { title: 'Organizations', paragraphs: ['Organization pages and entities.'], links: [{ label: 'Home', href: '/' }] },
   mediaDistribution: {
-    title: 'Release media archive',
+    title: 'Press Release Archive',
     paragraphs: [
-      'Filter by topic to focus on the announcements that matter to you. Every release uses the same readable layout for consistency across your organization and partners.',
+      'Browse our complete archive of press releases, corporate announcements, and media statements. Filter by category to find the news that matters to your beat.',
     ],
     links: [
       { label: 'Home', href: '/' },
-      { label: 'Contact', href: '/contact' },
+      { label: 'Contact Press Team', href: '/contact' },
     ],
   },
 }
